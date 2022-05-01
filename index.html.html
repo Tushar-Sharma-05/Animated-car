@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+        .bg{
+            height: 100vh;
+            width: 100%;
+            background-image: url(images/sky.jpg);
+            background-size: cover;
+            position: relative;
+            background-position: center;
+            overflow-x: hidden;
+
+        }
+        .highway{
+            height: 100px;
+            width: 500%;
+            display: block;
+            background-image: url(images/road.png);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            background-repeat: repeat-x;
+            animation: highway 5s linear infinite;
+        }
+        @keyframes highway{
+            100%{
+                transform: translateX(-3400px);
+            }
+
+        }
+        .city{
+            height: 250px;
+            width: 500%;
+            background-image: url(images/city2.png);
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            display: block;
+            z-index: 1;
+            background-repeat: repeat-x;
+            animation: city 10s linear infinite;
+        }
+        @keyframes city {
+            100%{
+            transform: translateX(-1400px);
+            }
+        }
+        .car{
+            width: 400px;
+            left: 50%;
+            bottom: 45px;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+        .car img{
+            width: 100%;
+            animation: car 1s linear infinite;
+        }
+        @keyframes car {
+            100%{
+                transform: translatey(-1px);
+            }
+            
+            50%{
+                transform: translatey(1px);
+            }
+            
+            0%{
+                transform: translatey(-1px);
+            }
+            
+        }
+        .wheel{
+            left: 50%;
+            bottom: 178px;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+        .wheel img{
+            width: 72px;
+            height: 72px;
+            animation: wheel .8s linear infinite;
+
+        }
+        @keyframes wheel{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .backwheel{
+            left: -142px;
+            position: absolute;
+            top: 60px;
+        }
+        .frontwheel{
+            left: 71px;
+            position: absolute;
+            top: 60px;
+        }
+        .tree{
+            left: 40%;
+            transform: translateX(-50%);
+            top: 187px;
+            position: absolute;
+            z-index: 2;
+            animation: tree 4s linear infinite;
+
+        }
+        .tree img{
+            width: 172px;
+            height: 372px;
+
+        }
+        .tree1{
+            left: 1472px;
+            position: absolute;
+        }
+        .tree2{
+            left: 171px;
+            position: absolute;
+        }
+        @keyframes tree {
+            100%{
+            transform: translateX(-2400px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="highway"></div>
+    <div class="city"></div>
+    <div class="car">
+        <img src="images/car.png">
+    </div>
+    <div class="wheel">
+        <img src="images/wheel.png" class="backwheel">
+        <img src="images/wheel.png" class="frontwheel">
+    </div>
+    <div class="tree">
+        <img src="images/tree1.png" class="tree1">
+        <img src="images/tree2.png" class="tree2">
+    </div>
+    
+</body>
+</html>
